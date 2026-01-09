@@ -1,9 +1,10 @@
 __pycache__/
 *.py[cod]
-venv/
 .env
 .ipynb_checkpoints/
 .vscode/
 data/raw/
 data/processed/
 *.pbix
+.venv/
+notebooks/
