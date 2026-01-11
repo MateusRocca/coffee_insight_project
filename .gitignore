@@ -5,5 +5,4 @@ __pycache__/
 .vscode/
 data/raw/
 data/processed/
-*.pbix
 .venv/
