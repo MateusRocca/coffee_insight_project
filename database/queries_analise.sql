@@ -1,10 +1,10 @@
--- Faturamento Total e Volume de Vendas
+-- Consulta 1: Faturamento Total e Volume de Vendas
 SELECT 
     COUNT(*) AS total_vendas, 
     SUM(money) AS faturamento_total 
 FROM sales_coffee;
 
--- Top 5 cafés mais vendidos
+-- Consulta 2: Top 5 cafés mais vendidos
 SELECT 
     coffee_name, 
     COUNT(*) AS quantidade 
@@ -13,7 +13,7 @@ GROUP BY coffee_name
 ORDER BY quantidade DESC 
 LIMIT 5;
 
---Horários de maior movimento (PICO)
+-- Consulta 3: Horários de maior movimento (PICO)
 SELECT 
     hour_of_day, 
     COUNT(*) AS total_pedidos 
@@ -21,7 +21,7 @@ FROM sales_coffee
 GROUP BY hour_of_day 
 ORDER BY total_pedidos DESC;
 
--- Preferência de Pagamento
+-- Consulta 4: Preferência de Pagamento
 SELECT 
     cash_type, 
     COUNT(*) AS total,
@@ -29,14 +29,14 @@ SELECT
 FROM sales_coffee 
 GROUP BY cash_type;
 
--- Dia que mais vende
+-- Consulta 5: Dia que mais vende
 SELECT 
 	weekday,
 COUNT(*) AS dia_mais_vende
 FROM sales_coffee
-GROUP BY weekday
+GROUP BY weekday;
 
--- Gastos médios por períodos
+-- Consulta 6: Gastos médios por períodos
 SELECT 
     time_of_day,
     COUNT(*) AS total_pedidos,
